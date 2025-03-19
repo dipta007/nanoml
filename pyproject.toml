@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nanoml"
+version = "0.1.0"
+description = "Small utility functions for machine learning"
+authors = [
+    {name = "Shubhashis Roy Dipta", email = "iamdipta@gmail.com"},
+]
+maintainers = []
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = [
+    "machine learning",
+    "utility functions",
+    "NLP",
+    "CV",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Deep Learning",
+    "AI",
+    "Machine Learning",
+    "Utility Functions",
+    "NanoML",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.24.4",
+    "torch>=2.5.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dipta007/nanoml"
+"Bug Tracker" = "https://github.com/dipta007/nanoml/issues"
+
+[tool.ruff]
+line-length = 120
+
+[dependency-groups]
+dev = [
+    "pre-commit>=3.5.0",
+    "ruff>=0.11.0",
+    "sphinx>=7.1.2",
+]
