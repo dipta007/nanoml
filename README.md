@@ -1,11 +1,9 @@
 # nanoml
 
-A collection of small utility functions for machine learning tasks.
+A collection of **nano** utility functions to make the **ML** code cleaner
 
 > [!IMPORTANT]
 > This project is under active development. Feel free to open an issue or submit a pull request.
-
-## Installation
 
 ```bash
 pip install nanoml
@@ -14,6 +12,15 @@ pip install nanoml
 ## Documentation
 
 - [Documentation](https://nanoml.roydipta.com)
+
+## Example
+
+```python
+from nanoml.dtype import is_bf16_supported
+
+print(is_bf16_supported())
+# True if bfloat16 is supported, False otherwise
+```
 
 ## Contributing
 
