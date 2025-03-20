@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "nanoml"
-version = "0.1.1"
+version = "0.1.2"
 description = "Small utility functions for machine learning"
 authors = [
     {name = "Shubhashis Roy Dipta", email = "iamdipta@gmail.com"},
@@ -38,6 +38,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
+    "datasets>=3.1.0",
     "numpy>=1.24.4",
     "torch>=2.5.0",
 ]
