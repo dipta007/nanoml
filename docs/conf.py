@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "nanoml"
-copyright = "%Y, Shubhashis Roy Dipta"
+copyright = "2025, Shubhashis Roy Dipta"
 author = "Shubhashis Roy Dipta"
 
 # -- General configuration ---------------------------------------------------
