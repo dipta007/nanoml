@@ -11,3 +11,4 @@ nanoml documentation
    :caption: Contents:
 
    nanoml
+   readme_link

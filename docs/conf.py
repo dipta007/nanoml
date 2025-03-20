@@ -20,6 +20,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.viewcode",
     "sphinx.ext.githubpages",
+    "sphinx_mdinclude",
 ]
 
 templates_path = ["_templates"]
