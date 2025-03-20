@@ -16,7 +16,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -U sphinx
-        sphinx-apidoc src/ --force -d 10 --separate -H nanoml -A "Shubhashis Roy Dipta" -o ./docs --ext-autodoc --ext-viewcode --ext-githubpages
+        sphinx-apidoc src/ --force -d 10 --separate -H nanoml -A "Shubhashis Roy Dipta" -o docs/ --ext-autodoc --ext-viewcode --ext-githubpages
     # Standard drop-in approach that should work for most people.
     - uses: ammaraskar/sphinx-action@7.0.0
       with:
@@ -26,29 +26,15 @@ jobs:
       with:
         build-command: "sphinx-build -b html . _build"
         docs-folder: "docs/"
-    # Grabbing custom dependencies and building as a pdf.
-    # - uses: ammaraskar/sphinx-action@7.0.0
-    #   with:
-    #     pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended"
-    #     build-command: "make latexpdf"
-    #     docs-folder: "docs2/"
-    # Great extra actions to compose with:
-    # Create an artifact of the html output.
     - uses: actions/upload-artifact@v4
       with:
         name: DocumentationHTML
-        path: docs/_build/html/
-    # Create an artifact out of the previously built pdf.
-    # - uses: actions/upload-artifact@v4
-    #   with:
-    #     name: Documentation
-    #     path: docs2/_build/latex/pdfexample.pdf
-    # Publish built docs to gh-pages branch.
+        path: docs/_build/
     # ===============================
     - name: Commit documentation changes
       run: |
         git clone https://github.com/dipta007/nanoml --branch gh-pages --single-branch gh-pages
-        cp -r docs/_build/html/* gh-pages/
+        cp -r docs/_build/* gh-pages/
         cd gh-pages
         touch .nojekyll
         git config --local user.email "action@github.com"
