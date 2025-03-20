@@ -17,10 +17,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -U sphinx
         sphinx-apidoc src/ --force -d 10 --separate -H nanoml -A "Shubhashis Roy Dipta" -o docs/ --ext-autodoc --ext-viewcode --ext-githubpages
-    # Standard drop-in approach that should work for most people.
-    - uses: ammaraskar/sphinx-action@7.0.0
-      with:
-        docs-folder: "docs/"
     # Example of using a custom build-command.
     - uses: ammaraskar/sphinx-action@7.0.0
       with:
