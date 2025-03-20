@@ -1,0 +1,7 @@
+nanoml.device module
+====================
+
+.. automodule:: nanoml.device
+   :members:
+   :show-inheritance:
+   :undoc-members:

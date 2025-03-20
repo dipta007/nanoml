@@ -1,0 +1,20 @@
+nanoml package
+==============
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 10
+
+   nanoml.data
+   nanoml.device
+   nanoml.dtype
+
+Module contents
+---------------
+
+.. automodule:: nanoml
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -1,0 +1,7 @@
+nanoml
+======
+
+.. toctree::
+   :maxdepth: 10
+
+   nanoml
