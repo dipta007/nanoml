@@ -15,6 +15,7 @@ jobs:
     - name: Generate docs from the `src/` directory.
       run: |
         python -m pip install --upgrade pip
+        pip install -e .
         pip install -U sphinx
         sphinx-apidoc src/ --force -d 10 --separate -H nanoml -A "Shubhashis Roy Dipta" -o docs/ --ext-autodoc --ext-viewcode --ext-githubpages
         sphinx-build -b html docs/ docs/_build
