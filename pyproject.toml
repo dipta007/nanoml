@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "nanoml"
-version = "0.1.2"
+version = "0.1.4"
 description = "Small utility functions for machine learning"
 authors = [
     {name = "Shubhashis Roy Dipta", email = "iamdipta@gmail.com"},
