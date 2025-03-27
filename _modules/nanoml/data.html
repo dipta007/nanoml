@@ -62,21 +62,22 @@
 
 <div class="viewcode-block" id="split_hf_dataset">
 <a class="viewcode-back" href="../../nanoml.data.html#nanoml.data.split_hf_dataset">[docs]</a>
-<span class="k">def</span> <span class="nf">split_hf_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">val_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">split_hf_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">val_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Split a Hugging Face dataset into train, validation, and test sets.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        dataset (datasets.Dataset): The dataset to split.</span>
-<span class="sd">        val_size (float | int, optional): The size of the validation set. Defaults to 0.1.</span>
-<span class="sd">        test_size (float | int, optional): The size of the test set. Defaults to 0.1.</span>
+<span class="sd">        | dataset (datasets.Dataset): The dataset to split.</span>
+<span class="sd">        | val_size (float | int, optional): The size of the validation set. Defaults to 0.1.</span>
+<span class="sd">        | test_size (float | int, optional): The size of the test set. Defaults to 0.1.</span>
+<span class="sd">        | **kwargs: Additional keyword arguments to pass to the `train_test_split` method.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        datasets.DatasetDict: A dictionary containing the train, validation, and test sets.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">train_val</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">test_size</span><span class="o">=</span><span class="n">val_size</span><span class="p">)</span>
+    <span class="n">train_val</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">test_size</span><span class="o">=</span><span class="n">val_size</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="n">val</span> <span class="o">=</span> <span class="n">train_val</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">]</span>
 
-    <span class="n">train_test</span> <span class="o">=</span> <span class="n">train_val</span><span class="p">[</span><span class="s2">&quot;train&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">test_size</span><span class="o">=</span><span class="n">test_size</span><span class="p">)</span>
+    <span class="n">train_test</span> <span class="o">=</span> <span class="n">train_val</span><span class="p">[</span><span class="s2">&quot;train&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">test_size</span><span class="o">=</span><span class="n">test_size</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="n">train</span> <span class="o">=</span> <span class="n">train_test</span><span class="p">[</span><span class="s2">&quot;train&quot;</span><span class="p">]</span>
     <span class="n">test</span> <span class="o">=</span> <span class="n">train_test</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">]</span>
 
